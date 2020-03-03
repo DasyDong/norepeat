@@ -34,7 +34,7 @@ def gan_menu(filename, is_prefix=''):
             i = i.strip(' \t\n')
             head = i.split(' ')[0]
 
-            if is_prefix and head.count('#') >= 3:
+            if is_prefix and head.count('#') == 3:
                 head_id += 1
                 prefix = str(head_id)
                 prefix_dot = prefix + "."
