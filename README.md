@@ -7,6 +7,7 @@
         - [3.Merge all dirs files to a same directory named 'merge'](#3merge-all-dirs-files-to-a-same-directory-named-merge)
         - [4.Split files to a new directory for same type](#4split-files-to-a-new-directory-for-same-type)
         - [5.Rename multiple file names](#5rename-multiple-file-names)
+        - [6.Download http image](#6download-http-image)
 # norepeat
 
 The [norepeat](https://pypi.org/project/norepeat/1.0.0/) package contains some magical function, it's my personal tools collection...
@@ -178,4 +179,23 @@ optional arguments:
   -r REMOVE, --remove REMOVE
                         new file name with removing src name
   -i ID, --id ID        new file name need id
+```
+
+### 6.Download http image
+```
+norepeat download_img -h
+```
+
+```
+usage: download_img [-h] [-u URL] [-n NAME]
+
+    Download image to current directory
+    Eg:
+        norepeat download_img -u=https://test.png -n=test.png
+
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u URL, --url URL     img url
+  -n NAME, --name NAME  image name
 ```
