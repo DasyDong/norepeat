@@ -61,7 +61,7 @@ def gan_menu(filename, is_prefix=''):
                 new_title = '['  + prefix_dot + suf_str + '](#'
                 # blank should replace -
                 # others should r4place by empty
-                p = re.compile(r"[,$().#+&*:?{}=，'？。（）]")
+                p = re.compile(r"[,$().#+&*:?{}=，'？。（）、]")
                 suf_str = re.sub(p, "", suf_str).replace(' ', '-').lower()
 
                 if head_id != 0:
