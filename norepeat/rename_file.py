@@ -20,7 +20,7 @@ def rename_multiples(dir_path, prefix='', suffix='', remove=False):
 
 if __name__ == '__main__':
     description = """
-    Rename multiple file names 
+    Rename multiple file names  批量重命名
     Eg:
         norepeat rename_file -d=test -p=test -s=end -r=true -i=true
         before:

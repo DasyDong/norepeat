@@ -23,8 +23,9 @@ def merge_dir(path, dst_path):
 if __name__ == '__main__':
     description = """
     Merge all dirs files to a same directory named 'merge'
+    合并迭代所有目录文件夹， 将全部文件合并到merge文件夹下
     Eg:
-        norepeat split_dir -p=test
+        norepeat merge_dir -p=test
         before:
             dir
                 txt

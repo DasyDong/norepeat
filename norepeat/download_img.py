@@ -17,7 +17,7 @@ def download_img(img_url, name):
 
 if __name__ == '__main__':
     description = """
-    Download image to current directory
+    Download image to current directory 下载网络图片到本地目录
     Eg:
         norepeat download_img -u=https://test.png -n=test.png
     """

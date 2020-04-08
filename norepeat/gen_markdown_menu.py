@@ -61,7 +61,7 @@ def gan_menu(filename, is_prefix=''):
                 new_title = '['  + prefix_dot + suf_str + '](#'
                 # blank should replace -
                 # others should r4place by empty
-                p = re.compile(r"[,$().#+&*:?{}=，'？。（）、]")
+                p = re.compile(r"[,$().#+&*:?{}=，'？。（）、/!@%^-]")
                 suf_str = re.sub(p, "", suf_str).replace(' ', '-').lower()
 
                 if head_id != 0:
@@ -87,6 +87,7 @@ def gan_menu(filename, is_prefix=''):
 if __name__ == '__main__':
     description = """
     Generate markdown Menu(TOC(Table of Content)) automatically
+    生成Markdown TOC目录结构， 对###三层可以增加自动序号
     Eg:
         norepeat gen_markdown_menu -n=sample.md
         - [Python](#python)

@@ -23,7 +23,7 @@ def split_dir(path, remove):
 
 if __name__ == '__main__':
     description = """
-    Split files to a new directory for same type
+    Split files to a new directory for same type 根据文件类型分离目录下文件到不同文件夹
     Eg:
         norepeat split_dir -p=test
         before:
