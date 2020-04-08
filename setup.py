@@ -14,7 +14,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
 # https://packaging.python.org/tutorials/packaging-projects/
 setup(
     name="norepeat",
-    version="1.0.12",
+    version="1.0.13",
     description="Less codes make more tools",
     long_description=README,
     long_description_content_type="text/markdown",

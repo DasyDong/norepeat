@@ -32,7 +32,7 @@ def readfile(filename):
 def diff_file(filename1, filename2):
     text1_lines = readfile(filename1)
     text2_lines = readfile(filename2)
-    d = difflib.HtmlDiff()
+    d = difflib.HtmlDiff(wrapcolumn=80)
     # context=True时只显示差异的上下文，默认显示5行，由numlines参数控制，context=False显示全文，差异部分颜色高亮，默认为显示全文
     result = d.make_file(text1_lines, text2_lines, filename1, filename2, context=True)
     return result
