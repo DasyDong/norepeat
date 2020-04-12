@@ -6,6 +6,11 @@ import os
 
 def download_img(img_url, name):
     print (img_url)
+    if not name:
+        try:
+            name = img_url.split('/')[-1].split('.')[0]
+        except:
+            name = img_url[:-10]
     r = requests.get(img_url, stream=True)
     print(r.status_code)
     if r.status_code == 200:
@@ -19,7 +24,9 @@ if __name__ == '__main__':
     description = """
     Download image to current directory 下载网络图片到本地目录
     Eg:
-        norepeat download_img -u=https://test.png -n=test.png
+        norepeat download_img -u=https://a.trip.com/a/b/test.png
+        norepeat download_img -u=https://a.trip.com/a/b/test.png -n custom
+        
     """
     parser = argparse.ArgumentParser(description=description,
                                      prog='download_img',
