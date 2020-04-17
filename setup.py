@@ -14,7 +14,7 @@ with open(os.path.join(HERE, "README.md")) as fid:
 # https://packaging.python.org/tutorials/packaging-projects/
 setup(
     name="norepeat",
-    version="1.0.15",
+    version="1.1.0",
     description="Less codes make more tools",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,6 +28,6 @@ setup(
     ],
     packages=find_packages(),
     include_package_data=True,
-    install_requires=[],
+    install_requires=['pyenchant'],
     entry_points={"console_scripts": ["norepeat=norepeat.__main__:main"]},
 )

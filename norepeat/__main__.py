@@ -21,7 +21,7 @@ def main():  # type: () -> None
                              and file.endswith('.py')])
                 for f_s in f_s_files:
                     method = f_s.split('.')[0]
-                    print(method)
+                    print(" " * 10 + method)
                     if is_detail:
                         code = "python {}/{}.py {}".format(current_dir, method, ' '.join(sys.argv[1:]))
                         os.system(code)

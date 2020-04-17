@@ -1,6 +1,6 @@
 - [norepeat](#norepeat)
     - [Installation](#installation)
-    - [norepeat package (Private-DEBUG)](#norepeat-package-private-debug)
+    - [norepeat package (DEBUG)](#norepeat-package-debug)
     - [DOC](#doc)
         - [1.Count a project sum of codes number](#1count-a-project-sum-of-codes-number)
         - [2.Generate markdown menu automatically](#2generate-markdown-menu-automatically)
@@ -9,6 +9,7 @@
         - [5.Rename multiple file names](#5rename-multiple-file-names)
         - [6.Download http image](#6download-http-image)
         - [7.Compare dirs files](#7compare-dirs-files)
+        - [8.Spell check](#8spell-check)
 # norepeat
 
 The [norepeat](https://pypi.org/project/norepeat/1.0.0/) package contains some magical function, it's my personal tools collection...
@@ -23,7 +24,7 @@ pip install norepeat
 The norepeat is supported on Python 3 and above.
 
 
-## norepeat package (Private-DEBUG)
+## norepeat package (DEBUG)
 https://pypi.org/project/norepeat/1.0.0/
 
 TEST:
@@ -114,7 +115,7 @@ usage: merge_dir [-h] [-p PATH]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PATH, --path PATH  dir path, use . for current dir
+  -p PATH, --path PATH  dir path
 ```
 ### 4.Split files to a new directory for same type
 ```
@@ -144,7 +145,7 @@ usage: split_dir [-h] [-p PATH] [-r REMOVE]
 
 optional arguments:
   -h, --help            show this help message and exit
-  -p PATH, --path PATH  dir path, use . for current dir
+  -p PATH, --path PATH  dir path
   -r REMOVE, --remove REMOVE
                         if remove src files, default is No
 ```
@@ -237,3 +238,27 @@ optional arguments:
 result:
 
 ![](./pics/diffhtml.jpg)
+
+### 8.Spell check
+
+```
+norepeat spell_check -h
+```
+
+```
+usage: spell_check [-h] [-p PATH]
+
+    It's used to check en-US word typo in project
+    spell-check用来检查项目中英文单词拼写问题
+    Eg:
+        norepeat spell_check -p=test
+    output:
+        spell_check_ignore.txt : ignore checking words
+        spell_check_wrong.txt : wrong spell words
+
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PATH, --path PATH  directory path
+
+```

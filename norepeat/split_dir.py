@@ -46,14 +46,14 @@ if __name__ == '__main__':
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
                                      )
 
-    parser.add_argument('-p', '--path', help='dir path, use . for current dir')
+    parser.add_argument('-p', '--path', help='dir path')
     parser.add_argument('-r', '--remove', help='if remove src files, default is No', default='')
 
     args = parser.parse_args()
     try:
         if not args.path:
             raise Exception('Missing params path')
-        src_path = args.path if args.path !='.' else os.getcwd()
+        src_path = args.path
         split_dir(src_path, args.remove)
     except Exception as e:
         print(str(e))

@@ -50,13 +50,13 @@ if __name__ == '__main__':
                                      formatter_class=argparse.RawDescriptionHelpFormatter,
                                      )
 
-    parser.add_argument('-p', '--path', help='dir path, use . for current dir')
+    parser.add_argument('-p', '--path', help='dir path')
 
     args = parser.parse_args()
     try:
         if not args.path:
             raise Exception('Missing params path')
-        src_path = args.path if args.path !='.' else os.getcwd()
+        src_path = args.path
         dst_path = src_path + "/merge"
         merge_dir(src_path, dst_path)
     except Exception as e:
