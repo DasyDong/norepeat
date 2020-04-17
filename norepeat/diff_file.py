@@ -16,7 +16,6 @@ import argparse
 import sys
 import os
 
-dir1_names_dict = {}
 
 # 创建打开文件函数，并按换行符分割内容
 def readfile(filename):
@@ -53,8 +52,14 @@ def write_diff_dirs(dir1, dir2):
     for name in same_names:
         results.append(diff_file(dir1_names_dict.get(name), dir2_names_dict.get(name)))
 
+    added_names = dir2_names_dict.keys() - dir1_names_dict.keys()
+    removed_names = dir1_names_dict.keys() - dir2_names_dict.keys()
+
     # 内容保存到result.html文件中
     with open('result.html', 'w') as resultfile:
+        d = difflib.HtmlDiff(wrapcolumn=80)
+        result = d.make_file(removed_names, added_names, '缺失文件： \n\r', '新增文件： \n\r',  context=True)
+        resultfile.write(''.join(result))
         resultfile.write(''.join(results))
 
 
